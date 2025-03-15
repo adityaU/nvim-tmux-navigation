@@ -29,11 +29,11 @@ end
 
 -- change the current pane according to direction
 function util.tmux_change_pane(direction)
-    if direction == "l" then
+    if direction == "h" then
         tmux_command("previous-window")
         return
     end
-    if direction == "r" then
+    if direction == "l" then
         tmux_command("next-window")
         return
     end
