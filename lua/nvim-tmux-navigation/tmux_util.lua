@@ -9,7 +9,6 @@ local tmux_directions = { ['p'] = 'l', ['h'] = 'L', ['j'] = 'D', ['k'] = 'U', ['
 -- not nil) is made before actually calling this function
 local function tmux_command(command)
     local tmux_socket = vim.fn.split(vim.env.TMUX, ',')[1]
-    print(tmux_socket)
     return vim.fn.system("tmux -S " .. tmux_socket .. " " .. command)
 end
 
